@@ -1,4 +1,4 @@
-<div id="app-card-grid" class="grid grid-cols-1 lg:grid-cols-2 uppercase">
+<div id="app-card-grid" class="grid grid-cols-1 lg:grid-cols-2 py-3">
   <% @apps.each do |app| %>
     <%= render partial: "app_card", locals: { app: app, id: app[:id], name: app[:name], cover: cover(app) } %>
   <% end %>

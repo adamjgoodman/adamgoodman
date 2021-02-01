@@ -1,18 +1,36 @@
-<div id="header" class="mx-0 rounded-none w-full flex flex-row rounded">
-  <div class="w-0 lg:w-1/8">
+<div class="w-5/6 rounded-lg flex px-3 pt-3 mx-auto bg-indigo-500 m-4 shadow-md">
+  <div class="w-1/3 md:w-1/4 text-center">
+    <%= image_tag "me2.png" %>
   </div>
-  <div class="text-center w-2/3 md:w-1/4 lg:w-1/3 h-56 lg:h-64 xl:h-72 2xl:h-80 overflow-hidden justify-items-center grid items-end">
-    <%= image_tag("me2.png", class: "w-4/5 md:w-4/5 lg:w-3/5 xl:w-2/3 m:fixed") %>
-  </div>
-  <div class="w-2/3 mx-auto flex-wrap flex content-center font-mono tracking-tight antialiased">
-    <div class="text-alt-green-100 text-2xl md:text-5xl font-bold w-full pb-0 md:pb-2 bg-my-gray">
-      <span class="text-pink-600 text-xl md:text-4xl mr-3">def </span>Adam_Goodman
-    </div>
-    <div class="text-sm md:text-xl lg:text-3xl pt-1 w-full bg-my-gray pl-8 pb-0 md:pb-2 text-yellow-200">
-      "Full Stack Ruby on Rails Developer"
-    </div>
-    <div class="text-pink-600 text-xl md:text-4xl font-bold bg-my-gray pr-3 w-full">
-      end
+  <div class="w-2/3 md:w-3/4 font-weight-bold flex items-center flex-column justify-center w-auto text-left">
+    <div class="text-3xl md:text-5xl font-bold">
+      Adam Goodman
+      <hr />
+      <div class="text-lg md:text-3xl font-normal">
+        Full Stack Ruby on Rails Developer
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-5 pt-5 mt-5 gap-x-2 gap-y-2 text-sm text-center">
+        <%= link_to root_path do %>
+          <div class="rounded-lg font-bold text-center bg-indigo-800 p-5 h-12 md:h-32 flex items-center flex-column justify-center">
+            Skills & Tools
+          </div>
+        <% end %>
+        <%= link_to web_applications_path do %>
+          <div class="rounded-lg font-bold text-center bg-indigo-800 p-5 h-12 md:h-32 flex items-center flex-column justify-center">
+            Web Apps
+          </div>
+        <% end %>
+        <%= link_to resume_path do %>
+          <div class="rounded-lg font-bold text-center bg-indigo-800 p-5 h-12 md:h-32 flex items-center flex-column justify-center">
+            Resume
+          </div>
+        <% end %>
+        <%= link_to contact_path do %>
+          <div class="rounded-lg font-bold text-center bg-indigo-800 p-5 h-12 md:h-32 flex items-center flex-column justify-center">
+            Contact
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

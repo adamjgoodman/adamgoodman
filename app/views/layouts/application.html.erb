@@ -9,10 +9,9 @@
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="h-screen p-0 md:p-3 bg-my-gray">
+  <body class="h-screen px-0 pt-0 bg-gray-300 pb-3">
     <%= render partial: "header" %>
-    <%= render partial: "nav" %>
-    <div data-animate-in='animate-slide-in-up' data-animate-out="animate-slide-out-down" class="font-sans stage p-3 shadow-md bg-my-gray mx-auto">
+    <div class="bg-indigo-500 w-5/6 rounded-lg stage mx-auto shadow-lg mb-3 pb-3">
       <%= yield %>
       <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
       <%= yield :after_js %>

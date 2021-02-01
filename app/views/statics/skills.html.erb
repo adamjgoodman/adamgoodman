@@ -1,8 +1,10 @@
-<div class="bg-white rounded border shadow-md px-2 text-gray-900 uppercase text-white grid grid-cols-4 md:grid-cols-6 w-full">
+<div class="text-white text-white uppercase gap-3 grid grid-cols-2 md:grid-cols-4 w-full p-3">
   <% skills.each do |skill, image| %>
-    <div class="text-center text-md mx-auto my-5 font-bold">
-      <%= image_tag(image, class: "mx-auto my-2 justify-self-center") %>
-      <div class="mx-auto tracking-wide my-2"><%= skill %></div>
+    <div class="bg-indigo-800 rounded-lg">
+      <div class="text-center text-md mx-auto my-5 font-bold">
+        <%= image_tag(image, class: "mx-auto my-2 justify-self-center") %>
+        <div class="mx-auto tracking-wide my-2"><%= skill.titleize %></div>
+      </div>
     </div>
   <% end %>
 </div>

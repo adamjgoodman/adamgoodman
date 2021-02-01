@@ -7,14 +7,26 @@ html {
 }
 
 body {
-  background-image: url("../../assets/images/headerbg.png");
-  background-color: #272822;
-  background-repeat: no-repeat;
+  background: whitesmoke;
+  background-repeat: repeat;
   color: whitesmoke;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.bg-pixel {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/px_by_Gre3g.png");
 }
 
 .bg-my-gray {
   background-color: #2c2d26;
+}
+
+.bg-gray-transparent {
+  background: #4848489e
+}
+
+.bg-my-red {
+  background-color: #991c1c8c;
 }
 
 .gray-highlight {
