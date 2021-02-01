@@ -1,0 +1,13 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import './app/assets/stylesheets/master.scss';
+
+.active {
+  @apply text-purple-400;
+}
+
+.bg-smoke-light {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+

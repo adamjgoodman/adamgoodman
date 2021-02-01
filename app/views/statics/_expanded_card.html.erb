@@ -1,0 +1,48 @@
+<div class="modal fixed w-full h-full top-0 left-0 flex items-center justify-center color-gray-highlight z-100">
+  <div class="hidden modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+  <div class="hidden modal-container bg-white h-11/12 w-11/12 md:w-3/4 mx-auto my-auto rounded shadow-lg z-50 overflow-scroll" style="max-height: 90vh;">
+
+    <div class="modal-content py-4 text-left px-6">
+      <div class="flex justify-between items-center pb-3">
+        <p class="text-2xl font-bold mx-auto uppercase"><%= app[:name] %></p>
+      </div>
+
+      <div class="text-center text-sm p-3 mb-2 bg-whitesmoke rounded">
+        <%= app[:tagline] %>
+      </div>
+
+      <div class="text-center my-2 w-4/5 mx-auto font-bold">
+        <% app[:stack].each do |stack| %>
+          <div class="my-3 inline text-sm">
+            <%= stack %> <%= "|" unless stack == app[:stack].last %>
+          </div>
+        <% end %>
+      </div>
+
+      <%= render partial: "carousel", locals: { images: images(app) } %>
+
+      <div class="text-center text-xs md:text-sm">
+        <div class="mt-3">
+          <% app[:bullets].each do |bullet| %>
+            <div class="w-100 my-2 py-2 bg-whitesmoke rounded">
+             <%= bullet %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="flex justify-end pt-2">
+        <button id="close" class="uppercase text-sm font-bold modal-close px-4 gray-highlight p-3 rounded-lg text-white">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  $( '#close' ).click(function() {
+      $( '.modal' ).remove()
+      $( 'body' ).removeClass( 'fixed' )
+  })
+</script>

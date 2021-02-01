@@ -1,0 +1,99 @@
+<div class="grid text-5xl font-mono text-center my-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+  <div class="border border-gray-highlight p-3">
+    <%= mail_to "adam@adam-goodman.com", target: "_blank" do %>
+      <div class="text-sm my-3">
+        <span class="text-pink-600 font-bold">
+          <%= "<%= " %>
+        </span>
+        <span class="text-blue-300 font-bold">
+          mail_to
+        </span>
+        <span class="text-white font-bold">
+          email
+        </span>
+        <span class="text-pink-600 font-bold">
+          <%= "do %" + ">" %>
+        </span>
+      </div>
+      <div class="m-0">
+        <%= fas_icon("envelope", class: "m-0") %>
+      </div>
+      <div class="my-3 text-sm text-pink-600 font-bold">
+        <%= "<% end %" + ">" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="border border-gray-highlight p-3">
+    <a href="tel:860-818-1440" target="_blank">
+      <div class="text-sm my-3">
+        <span class="text-pink-600 font-bold">
+          <%= "<%= " %>
+        </span>
+        <span class="text-blue-300 font-bold">
+          tel_to
+        </span>
+        <span class="text-white font-bold">
+          phone_number
+        </span>
+        <span class="text-pink-600 font-bold">
+          <%= "do %" + ">" %>
+        </span>
+      </div>
+      <div class="m-0">
+        <%= fas_icon("mobile-alt", class: "m-0") %>
+      </div>
+      <div class="my-3 text-sm text-pink-600 font-bold">
+        <%= "<% end %" + ">" %>
+      </div>
+    </a>
+  </div>
+  <div class="border border-gray-highlight p-3">
+    <%= link_to "https://www.linkedin.com/in/adamjgoodman/", target: "_blank" do %>
+      <div class="text-sm my-3">
+        <span class="text-pink-600 font-bold">
+          <%= "<%= " %>
+        </span>
+        <span class="text-blue-300 font-bold">
+          link_to
+        </span>
+        <span class="text-white font-bold">
+          linkedin_path
+        </span>
+        <span class="text-pink-600 font-bold">
+          <%= "do %" + ">" %>
+        </span>
+      </div>
+      <div class="m-0">
+        <%= fab_icon("linkedin", class: "m-0") %>
+      </div>
+      <div class="my-3 text-sm text-pink-600 font-bold">
+        <%= "<% end %" + ">" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="border border-gray-highlight p-3">
+    <%= link_to "https://github.com/adamjgoodman", target: "_blank" do %>
+      <div class="text-sm my-3">
+        <span class="text-pink-600 font-bold">
+          <%= "<%= " %>
+        </span>
+        <span class="text-blue-300 font-bold">
+          link_to
+        </span>
+        <span class="text-white font-bold">
+          github_path
+        </span>
+        <span class="text-pink-600 font-bold">
+          <%= "do %" + ">" %>
+        </span>
+      </div>
+      <div class="m-0">
+        <%= fab_icon("github", class: "m-0") %>
+      </div>
+      <div class="my-3 text-sm text-pink-600 font-bold">
+        <%= "<% end %" + ">" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

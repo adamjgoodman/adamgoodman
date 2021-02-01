@@ -1,0 +1,55 @@
+<% foodtalk_web_stack = %w(Ruby\ 2.6.2 Rails\ 5.1.7 PostgreSQL Bootstrap jQuery RSpec Capybara Selenium Auth0 WordPress\ API YouTube\ API MailChimp ) %>
+
+<div class="bg-whitesmoke border shadow-md px-2 text-gray-900 my-3">
+  <div class="w-full mx-auto text-center text-3xl font-mono my-4 font-bold">
+    FoodTalk.org
+  </div>
+
+  <hr />
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 my-5 font-mono">
+    <div class="text-center w-full md:w-5/6 mx-auto">
+      <%= image_tag("app/assets/images/ft/cover.png", class: "shadow-md mx-auto mb-3") %>
+      <% foodtalk_web_stack.each do |stack| %>
+        <div class="my-3 inline text-sm font-bold">
+          <%= stack %> <%= "|" unless stack == foodtalk_web_stack.last %>
+        </div>
+      <% end %>
+    </div>
+    <div class="text-center text-xs md:text-sm">
+      <div class="mt-3">
+        • Introduced test-driven development into the stack using RSpec, Capybara, and Selenium.
+        <br /><br/> • Grew web application to include code access protected training modules for Healthy Childcare Georgia agents.
+        <br /><br/> • Developed demo.foodtalk.org for partner organizations to mock eLearning enrollment and participation without persisting database items
+        <br /><br/> • Redesigned application architecture to support expansion beyond the state of Georgia, supporting multiple zip code databases and unique needs based on implementing agency.
+        <br /><br/> • Independently designed and coded a complete front-end redesign.
+      </div>
+    </div>
+  </div>
+</div>
+
+<% potl_web_stack = ["Ruby 2.5.3", "Rail 5.2.3", "PostgreSQL", "Bootstrap", "RSpec", "Devise"] %>
+
+<div class="bg-whitesmoke border shadow-md px-2 text-gray-900">
+  <div class="w-full mx-auto text-center text-3xl font-mono my-4 font-bold">
+    Pic of the Litter
+  </div>
+
+  <hr />
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 my-5 font-mono">
+    <div class="text-center w-full md:w-5/6 mx-auto">
+      <%= image_tag("app/assets/images/ft/cover.png", class: "shadow-md mx-auto mb-3") %>
+      <% potl_web_stack.each do |stack| %>
+        <div class="my-3 inline text-sm font-bold">
+          <%= stack %> <%= "|" unless stack == potl_web_stack.last %>
+        </div>
+      <% end %>
+    </div>
+    <div class="text-center text-xs md:text-sm">
+      <div class="mt-3">
+        • A photo sharing web application that was built using industry-standard, test-driven development following numerous red/green/refactor cycles.
+      </div>
+    </div>
+  </div>
+</div>

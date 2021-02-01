@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adam Goodman</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="h-screen p-0 md:p-3 bg-my-gray">
+    <%= render partial: "header" %>
+    <%= render partial: "nav" %>
+    <div data-animate-in='animate-slide-in-up' data-animate-out="animate-slide-out-down" class="font-sans stage p-3 shadow-md bg-my-gray mx-auto">
+      <%= yield %>
+      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <%= yield :after_js %>
+    </div>
+  </body>
+</html>

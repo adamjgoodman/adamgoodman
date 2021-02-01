@@ -1,0 +1,11 @@
+<div id="<%= id %>-card" class="bg-whitesmoke rounded shadow-sm w-5/6 mx-auto color-gray-highlight p-2 transition-all duration-500 ease-linear mb-4">
+  <div class="w-full mx-auto text-center text-md my-2 font-bold">
+    <%= name %>
+    <hr class="my-2" />
+    <%= image_tag cover, class: "mx-auto max-h-64" %>
+  </div>
+  <div class="text-center py-2 font-bold">
+    <%= link_to "Find Out More", find_out_more_path(app: app), class: "mx-auto text-xs text-center gray-highlight text-white p-3 rounded w-48 inline-block", id: id, remote: true %>
+    <%= (link_to "View Live", app[:url], class: "mx-auto text-xs text-center gray-highlight text-white p-3 rounded w-48 inline-block", target: "_blank") unless app[:url].nil? %>
+  </div>
+</div>

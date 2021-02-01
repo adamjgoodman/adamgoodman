@@ -1,0 +1,31 @@
+<%= content_for(:after_js) do %>
+  <script>
+      $(document).ready(function(){
+          $('.owl-carousel').owlCarousel();
+      });
+  </script>
+<% end %>
+
+  <div class="owl-carousel w-3/4 mx-auto flex flex-col justify-center">
+    <% images.each do |image| %>
+      <div class="bg-cover h-96 w-100" style="background-image: url('<%= image_url(image) %>')"></div>
+    <% end %>
+  </div>
+
+  <script>
+      $(document).ready(function(){
+          $('.owl-carousel').owlCarousel({
+              stagePadding: 50,
+              loop: true,
+              margin:100,
+              responsive:{
+                  0:{
+                      items:1
+                  },
+                  600:{
+                      items:1
+                  }
+              }
+          })
+      });
+  </script>

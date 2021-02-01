@@ -1,0 +1,3 @@
+var modal = '<%= j render partial: "expanded_card", locals: { app: @app } %>'
+$( 'body' ).addClass( 'fixed' ).prepend( modal );
+$( '.hidden' ).delay( 100 ).fadeIn( 500 );
