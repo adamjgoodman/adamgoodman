@@ -8,6 +8,8 @@
     "@rails/webpacker": "4.3.0",
     "animate.css": "^4.1.1",
     "autoprefixer": "^9",
+    "coffee-loader": "^2.0.0",
+    "coffeescript": "1.12.7",
     "jquery": "^3.5.1",
     "owl.carousel": "^2.3.4",
     "postcss": "^7",

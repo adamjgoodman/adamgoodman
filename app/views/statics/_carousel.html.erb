@@ -8,7 +8,7 @@
 
   <div class="owl-carousel w-3/4 mx-auto flex flex-col justify-center">
     <% images.each do |image| %>
-      <div class="bg-cover h-96 w-100" style="background-image: url('<%= image_url(image) %>')"></div>
+      <div class="bg-cover h-56 md:h-96 w-100" style="background-image: url('<%= image_url(image) %>'); background-size: contain; background-repeat: no-repeat; background-position:center;"></div>
     <% end %>
   </div>
 

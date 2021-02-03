@@ -5,14 +5,14 @@
 
     <div class="modal-content py-4 text-left px-6">
       <div class="flex justify-between items-center pb-3">
-        <p class="text-2xl font-bold mx-auto"><%= app[:name] %></p>
+        <p class="text-2xl mx-auto"><%= app[:name] %></p>
       </div>
 
       <div class="text-center text-sm p-3 mb-2 bg-whitesmoke rounded">
         <%= app[:tagline] %>
       </div>
 
-      <div class="text-center my-2 w-4/5 mx-auto font-bold">
+      <div class="text-center my-2 w-4/5 mx-auto">
         <% app[:stack].each do |stack| %>
           <div class="my-3 inline text-sm">
             <%= stack %> <%= "|" unless stack == app[:stack].last %>
@@ -33,7 +33,7 @@
       </div>
 
       <div class="flex justify-end pt-2">
-        <button id="close" class="uppercase text-sm font-bold modal-close px-4 bg-indigo-600 p-3 rounded-lg text-white">Close</button>
+        <button id="close" class="uppercase text-sm modal-close px-4 bg-indigo-600 p-3 rounded-lg text-white">Close</button>
       </div>
 
     </div>

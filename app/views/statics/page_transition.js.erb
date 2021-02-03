@@ -1,0 +1,5 @@
+var partial = '<%= j render partial: "#{@partial}" %>'
+$( '#content' ).fadeOut( 'slow' ).queue(function() {
+    $( '#content' ).html( partial ).hide().fadeIn( 'slow' );
+    $( this ).dequeue();
+});
