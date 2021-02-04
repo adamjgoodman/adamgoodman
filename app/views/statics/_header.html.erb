@@ -1,35 +1,18 @@
 <div class="w-100 lg:w-5/6 rounded-lg flex px-3 pt-3 mx-auto">
   <div class="w-2/3 md:w-1/4 text-center flex flex-column items-end">
-    <%= image_tag "me2.png" %>
+    <%= link_to root_path do %>
+      <%= image_tag "me2.png" %>
+    <% end %>
   </div>
-  <div class="w-2/3 md:w-3/4 flex items-center flex-column justify-center w-auto text-left">
-    <div class="text-5xl md:text-8xl font-bold">
+  <div class="w-1/2 md:w-3/4 flex items-center flex-column justify-center w-auto text-left">
+    <div class="text-4xl md:text-7xl font-bold">
       Adam <br /> Goodman
       <hr />
       <div class="text-sm md:text-xl mt-2 font-light uppercase">
         Full Stack Ruby on Rails Developer
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-5 py-5 md:mt-5 gap-x-2 gap-y-2 text-xs sm:text-sm text-center font-light">
-        <%= link_to skills_path, remote: true do %>
-          <div class="rounded-lg text-center border p-5 h-12 md:h-16 flex items-center flex-column justify-center hover:bg-gray-100 hover:text-indigo-800 <%= @skill %>">
-            Skills & Tools
-          </div>
-        <% end %>
-        <%= link_to web_applications_path, remote: true do %>
-          <div class="rounded-lg text-center border p-5 h-12 md:h-16 flex items-center flex-column justify-center hover:bg-gray-100 hover:text-indigo-800">
-            Web Apps
-          </div>
-        <% end %>
-        <%= link_to resume_path, remote: true do %>
-          <div class="rounded-lg text-center border p-5 h-12 md:h-16 flex items-center flex-column justify-center hover:bg-gray-100 hover:text-indigo-800">
-            Resume
-          </div>
-        <% end %>
-        <%= link_to contact_path, remote: true do %>
-          <div class="rounded-lg text-center border p-5 h-12 md:h-16 flex items-center flex-column justify-center hover:bg-gray-100 hover:text-indigo-800">
-            Contact
-          </div>
-        <% end %>
+      <div id="nav" class="grid grid-cols-2 md:grid-cols-5 py-5 md:mt-5 gap-x-2 gap-y-1 md:gap-y-2 text-xs sm:text-sm text-center font-light">
+        <%= render partial: "nav" %>
       </div>
     </div>
   </div>

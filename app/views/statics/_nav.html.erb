@@ -1,20 +1,14 @@
-<div class="w-full grid-cols-4 pt-4 pb-3 md:px-2 text-sm md:text-xl gray-highlight text-center text-white font-mono tracking-tight antialiased">
-  <span class="text-pink-600 font-bold">
-    <%= "<%= render: " %>
-  </span>
-  <%= link_to root_path, class: "#{@skill} rounded font-bold pl-3 pr-0 pt-3 pb-5 text-center inline-flex" do %>
-    Skills & Tools
+<% if @hide_nav %>
+  <% 4.times do %>
+    <div class="w-28 lg:w-32 rounded-lg text-center p-5 h-12 md:h-16 flex items-center flex-column justify-center">
+    </div>
   <% end %>
-  <%= link_to web_applications_path, id: "web-applications", class: "#{@web_applications} rounded font-bold pl-3 pr-0 pt-3 pb-5 text-white text-center inline-flex" do %>
-    Web Applications
+<% else %>
+  <% nav_items.each do |item| %>
+    <%= link_to item[:path], remote: true do %>
+      <div class="text-sm w-20 lg:w-32 border rounded-lg text-center md:border p-2 lg:p-5 h-12 md:h-16 flex items-center flex-column justify-center hover:bg-gray-100 hover:text-indigo-800 <%= @skill %>">
+        <%= item[:name].titleize %>
+      </div>
+    <% end %>
   <% end %>
-  <%= link_to resume_path, id: "web-applications", class: "#{@resume} rounded font-bold pl-3 pr-0 pt-3 pb-5 text-white text-center inline-flex" do %>
-    Resume
-  <% end %>
-  <%= link_to contact_path, id: "web-applications", class: "#{@contact} rounded font-bold pl-3 pr-0 pt-3 pb-5 text-white text-center inline-flex" do %>
-    Contact
-  <% end %>
-  <span class="text-pink-600 font-bold ml-2">
-    <%= "%" + ">" %>
-  </span>
-</div>
+<% end %>

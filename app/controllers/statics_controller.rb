@@ -3,11 +3,10 @@ class StaticsController < ApplicationController
 
 
   def index
-
+    @hide_nav = true
   end
 
   def skills
-    @skill = "bg-gray-100 text-indigo-800"
     respond_to do |format|
       @partial = "skills"
       format.js { render "page_transition" }
@@ -15,7 +14,6 @@ class StaticsController < ApplicationController
   end
 
   def web_applications
-    @web_applications = "bg-gray-100 text-indigo-800"
     @apps = APPS
     respond_to do |format|
       @partial = "web_applications"
@@ -24,7 +22,6 @@ class StaticsController < ApplicationController
   end
 
   def resume
-    @resume = "bg-gray-100 text-indigo-800"
     respond_to do |format|
       @partial = "resume"
       format.js { render "page_transition" }
@@ -32,7 +29,6 @@ class StaticsController < ApplicationController
   end
 
   def contact
-    @contact = "bg-gray-100 text-indigo-800"
     respond_to do |format|
       @partial = "contact"
       format.js { render "page_transition" }

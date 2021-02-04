@@ -1,0 +1,9 @@
+<div class="grid grid-cols-2 md:mt-5 gap-x-2 gap-y-2 text-xs sm:text-sm text-center font-light w-4/5 mx-auto flex flex-column justify-center items-center">
+  <% nav_items.each do |item| %>
+    <%= link_to item[:path], remote: true do %>
+      <div class="bg-shadow text-xl rounded-lg text-center border p-5 h-40 md:h-48 flex items-center flex-column justify-center hover:bg-gray-100 hover:text-indigo-800 <%= @skill %>">
+        <%= item[:name].titleize %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
