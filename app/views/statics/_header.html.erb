@@ -9,7 +9,13 @@
       Adam <br /> Goodman
       <hr />
       <div class="text-sm md:text-xl mt-2 font-light uppercase">
+        <span class="text-lg font-thin opacity-50 text-red-300 mr-2">
+          <%= "<%=" %>
+        </span>
         Full Stack Ruby on Rails Developer
+        <span class="text-lg font-thin opacity-50 text-red-300 ml-2">
+          <%= "%" + ">" %>
+        </span>
       </div>
       <div id="nav" class="grid grid-cols-2 md:grid-cols-5 py-5 md:mt-5 gap-x-2 gap-y-1 md:gap-y-2 text-xs sm:text-sm text-center font-light">
         <%= render partial: "nav" %>
